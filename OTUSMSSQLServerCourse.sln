@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OTUSMSSQLServerHomeworks", "OTUSMSSQLServerHomeworks\OTUSMSSQLServerHomeworks.sqlproj", "{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WorldWideImporters", "WorldWideImporters\WorldWideImporters.sqlproj", "{F47C278C-4019-40AF-8619-2F32579A60E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29FBE1F-949B-427F-A5F0-A6A9670AEE69}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47C278C-4019-40AF-8619-2F32579A60E5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDB7E708-C24F-4216-9ACD-16359130575A}
+	EndGlobalSection
+EndGlobal
