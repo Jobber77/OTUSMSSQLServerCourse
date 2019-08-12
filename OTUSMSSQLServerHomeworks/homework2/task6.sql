@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[task6]
+﻿CREATE PROCEDURE [dbo].[Homework2Task6]
 AS
 BEGIN
 	SELECT DISTINCT c.[CustomerID], c.[CustomerName] 
@@ -6,5 +6,5 @@ BEGIN
 	INNER JOIN [Sales].[Orders] o ON o.[CustomerID] = c.[CustomerID]
 	INNER JOIN [Sales].[OrderLines] ol ON ol.[OrderID] = o.[OrderID]
 	INNER JOIN [Warehouse].StockItems si ON si.[StockItemID] = ol.[StockItemID]
-	WHERE si.StockItemName = 'Chocolate frogs 250g'
+	WHERE si.[StockItemName] = 'Chocolate frogs 250g'
 END

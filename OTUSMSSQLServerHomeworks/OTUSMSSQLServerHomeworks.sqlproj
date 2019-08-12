@@ -23,6 +23,7 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <TargetFrameworkProfile />
+    <TargetDatabase>WorldWideImporters</TargetDatabase>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -63,6 +64,9 @@
     <Build Include="homework2\task1.sql" />
     <Build Include="homework2\task2.sql" />
     <Build Include="homework2\task6.sql" />
+    <Build Include="homework2\task5.sql" />
+    <Build Include="homework2\task4.sql" />
+    <Build Include="homework2\task3.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="WorldWideImporters">

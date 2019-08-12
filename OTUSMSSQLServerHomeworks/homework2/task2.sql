@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [Homework1Task2]
+﻿CREATE PROCEDURE [Homework2Task2]
 AS
 BEGIN
 	SELECT s.[SupplierID], s.[SupplierName]

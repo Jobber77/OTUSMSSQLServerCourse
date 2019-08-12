@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [Homework1Task1]
+﻿CREATE PROCEDURE [Homework2Task1]
 AS
 BEGIN
 	SELECT * FROM [Warehouse].[StockItems] WHERE [StockItemName] LIKE 'Animal%'
