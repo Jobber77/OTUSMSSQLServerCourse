@@ -59,3 +59,56 @@ BEGIN
 	ORDER BY [OrderQuarter], [ThirdPartOfTheYear], o.[OrderDate]
 	OFFSET 1000 ROWS FETCH NEXT 100 ROWS ONLY
 END
+
+GO
+
+--option without functions
+
+CREATE PROCEDURE [dbo].[Homework2Task3Option2]
+AS
+BEGIN
+	SELECT 
+		o.[OrderID],
+		FORMAT(o.[OrderDate], 'MMMM') AS [OrderMonth],
+		DATEPART (qq, o.[OrderDate]) AS [OrderQuarter],
+		(CASE 
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 1 AND 4 THEN 1 
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 5 AND 8 THEN 2
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 9 AND 12 THEN 3
+			ELSE NULL
+		END) AS [ThirdPartOfTheYear],
+		o.[OrderDate]
+	FROM [Sales].[Orders] o
+	INNER JOIN [Sales].OrderLines ol ON ol.[OrderID] = o.[OrderID]
+	WHERE 
+		o.[PickingCompletedWhen] IS NOT NULL
+	GROUP BY o.OrderID, o.OrderDate
+	HAVING SUM(ol.UnitPrice) > 100 OR SUM(ol.Quantity) > 20
+	ORDER BY [OrderQuarter], [ThirdPartOfTheYear], o.[OrderDate]
+END
+
+GO
+
+CREATE PROCEDURE [dbo].[Homework2Task3PaginationOption2]
+AS
+BEGIN
+	SELECT 
+		o.[OrderID],
+		FORMAT(o.[OrderDate], 'MMMM') AS [OrderMonth],
+		DATEPART (qq, o.[OrderDate]) AS [OrderQuarter],
+		(CASE 
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 1 AND 4 THEN 1 
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 5 AND 8 THEN 2
+			WHEN DATEPART(mm, o.[OrderDate]) BETWEEN 9 AND 12 THEN 3
+			ELSE NULL
+		END) AS [ThirdPartOfTheYear],
+		o.[OrderDate]
+	FROM [Sales].[Orders] o
+	INNER JOIN [Sales].OrderLines ol ON ol.[OrderID] = o.[OrderID]
+	WHERE 
+		o.[PickingCompletedWhen] IS NOT NULL
+	GROUP BY o.OrderID, o.OrderDate
+	HAVING SUM(ol.UnitPrice) > 100 OR SUM(ol.Quantity) > 20
+	ORDER BY [OrderQuarter], [ThirdPartOfTheYear], o.[OrderDate]
+	OFFSET 1000 ROWS FETCH NEXT 100 ROWS ONLY
+END

@@ -2,14 +2,12 @@
 AS
 BEGIN
 	SELECT TOP 10 
-		po.[PurchaseOrderId], 
+		o.[OrderID], 
 		c.[CustomerName], 
 		p.[FullName] AS [SalesPersonName]
-	FROM [Purchasing].[PurchaseOrders] po
-	INNER JOIN [Sales].[Orders] o ON o.[OrderId] = po.[PurchaseOrderID]
-	LEFT OUTER JOIN [Sales].[Customers] c ON c.[CustomerID] = o.[CustomerID]
-	LEFT OUTER JOIN [Application].[People] p ON p.PersonID = o.[SalespersonPersonID]
-	WHERE po.IsOrderFinalized = 1
-	ORDER BY po.[OrderDate] DESC
+	FROM [Sales].[Orders] o
+	INNER JOIN [Sales].[Customers] c ON c.[CustomerID] = o.[CustomerID]
+	INNER JOIN [Application].[People] p ON p.PersonID = o.[SalespersonPersonID]
+	ORDER BY o.[OrderDate] DESC
 END
  
