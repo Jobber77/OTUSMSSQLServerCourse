@@ -3,7 +3,7 @@ CREATE PROCEDURE [dbo].[Homework3Task2Option1]
 AS
 BEGIN
 	SELECT [StockItemId], [StockItemName], [UnitPrice]
-	FROM [WideWorldImporters].[Warehouse].[StockItems]
+	FROM [Warehouse].[StockItems]
 	WHERE [UnitPrice] <= ALL (SELECT [UnitPrice] FROM [Warehouse].[StockItems])
 END
 
@@ -14,6 +14,6 @@ CREATE PROCEDURE [dbo].[Homework3Task2Option2]
 AS
 BEGIN
 	SELECT [StockItemId], [StockItemName], [UnitPrice]
-	FROM [WideWorldImporters].[Warehouse].[StockItems]
-	WHERE [UnitPrice] = (SELECT MIN(UnitPrice) FROM [WideWorldImporters].[Warehouse].[StockItems])
+	FROM [Warehouse].[StockItems]
+	WHERE [UnitPrice] = (SELECT MIN(UnitPrice) FROM [Warehouse].[StockItems])
 END
