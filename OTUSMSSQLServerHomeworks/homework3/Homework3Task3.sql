@@ -37,6 +37,5 @@ BEGIN
 	)
 	SELECT c.[CustomerID], c.[CustomerName]
 	FROM [Sales].[Customers] c 
-	WHERE EXISTS (SELECT * FROM TopPaymentUserIds
-					WHERE TopPaymentUserIds.[CustomerId]= c.[CustomerID])
+	INNER JOIN TopPaymentUserIds ON TopPaymentUserIds.[CustomerID] = c.[CustomerID]
 END

@@ -14,7 +14,7 @@ BEGIN
 		SELECT DISTINCT o.[OrderId], o.[CustomerID], o.[PickedByPersonID]
 		FROM [Sales].[Orders] o
 		INNER JOIN [Sales].[OrderLines] ol ON ol.[OrderId] = o.[OrderID]
-		WHERE ol.StockItemID IN (SELECT * FROM TopCostItems)
+		INNER JOIN TopCostItems ON TopCostItems.[StockItemID] = ol.[StockItemID]
 	),
 	CitiesWithDeliveryOfCostItems
 	AS
