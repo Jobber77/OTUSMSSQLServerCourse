@@ -60,6 +60,7 @@
     <Folder Include="Properties" />
     <Folder Include="homework2" />
     <Folder Include="homework3" />
+    <Folder Include="homework4" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="homework2\task1.sql" />
@@ -73,6 +74,7 @@
     <Build Include="homework3\Homework3Task3.sql" />
     <Build Include="homework3\Homework3Task4.sql" />
     <Build Include="homework3\Homework3Task5.sql" />
+    <Build Include="homework4\homework4Task1.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="WorldWideImporters">
@@ -87,5 +89,10 @@
       <Private>True</Private>
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="homework4\Homework4Task2.sql" />
+    <None Include="homework4\Homework4Task3.sql" />
+    <None Include="homework4\Homework4Task4.sql" />
   </ItemGroup>
 </Project>
