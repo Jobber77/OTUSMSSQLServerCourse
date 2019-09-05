@@ -75,6 +75,7 @@
     <Build Include="homework3\Homework3Task4.sql" />
     <Build Include="homework3\Homework3Task5.sql" />
     <Build Include="homework4\homework4Task1.sql" />
+    <Build Include="homework4\Homework4Task5.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="WorldWideImporters">
