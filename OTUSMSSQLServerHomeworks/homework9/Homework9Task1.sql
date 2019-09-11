@@ -1,0 +1,31 @@
+CREATE TABLE [dbo].[Users]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL,
+	[Name] NVARCHAR(256) NOT NULL,
+	[Email] NVARCHAR(256),
+	[ExternalId] NVARCHAR(256) NOT NULL
+)
+
+CREATE TABLE [dbo].[Stores]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL,
+	[Name] NVARCHAR(256) NOT NULL,
+	[ServerAddress] NVARCHAR(256) NOT NULL,
+	[SearchEndPoint] NVARCHAR(256) NOT NULL
+)
+
+CREATE TABLE [dbo].[Items]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL,
+	[StoreId] INT NOT NULL,
+	[ExternalId] NVARCHAR(256) NOT NULL,
+	[ExternalName] NVARCHAR(256) NOT NULL,
+	[LastAddedBy] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[UserWishlist]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL,
+	[UserId] INT NOT NULL,
+	[ItemId] INT NOT NULL
+)
