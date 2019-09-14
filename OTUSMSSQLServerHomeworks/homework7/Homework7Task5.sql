@@ -4,7 +4,7 @@ INSERT INTO #customerItems
 SELECT DISTINCT
 	c.[CustomerID],
 	si.[StockItemID],
-	DENSE_RANK() OVER (PARTITION BY c.[CustomerId] ORDER BY si.[UnitPrice] DESC, c.[CustomerId] )
+	DENSE_RANK() OVER (PARTITION BY c.[CustomerId] ORDER BY si.[UnitPrice] DESC)
 FROM [Sales].[Customers] c 
 INNER JOIN [Sales].[Invoices] i ON i.[CustomerID] = c.[CustomerID]
 INNER JOIN [Sales].[InvoiceLines] il ON il.[InvoiceID] = i.[InvoiceID]
@@ -20,9 +20,8 @@ SELECT DISTINCT
 FROM [Sales].[Customers] c 
 INNER JOIN [Sales].[Invoices] i ON i.[CustomerID] = c.[CustomerID]
 INNER JOIN [Sales].[InvoiceLines] il ON il.[InvoiceID] = i.[InvoiceID]
-INNER JOIN #customerItems ci ON ci.CustomerId = c.CustomerID
-INNER JOIN [Warehouse].[StockItems] si ON si.[StockItemID] = ci.[StockItemId]
-WHERE ci.[TopCostRank] <= 2
+CROSS APPLY (SELECT TOP 2 * FROM #customerItems ci WHERE ci.CustomerId = c.CustomerID ORDER BY [TopCostRank] ASC) customerItems
+INNER JOIN [Warehouse].[StockItems] si ON si.[StockItemID] = customerItems.[StockItemId]
 ORDER BY [CustomerId]
 
 DROP TABLE #customerItems
