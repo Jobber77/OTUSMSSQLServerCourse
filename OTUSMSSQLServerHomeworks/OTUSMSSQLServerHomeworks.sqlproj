@@ -65,6 +65,7 @@
     <Folder Include="homework7" />
     <Folder Include="homework8" />
     <Folder Include="homework9" />
+    <Folder Include="homework12" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="homework2\task1.sql" />
@@ -92,6 +93,12 @@
     <Build Include="homework9\Homework9Task1.sql" />
     <Build Include="homework9\Homework9Task2.sql" />
     <Build Include="homework9\Homework9Task3.sql" />
+    <Build Include="homework12\homework12Task1.sql" />
+    <Build Include="homework12\homework12Task2.sql" />
+    <Build Include="homework12\homework12Task3.sql" />
+    <Build Include="homework12\homework12Task4.sql" />
+    <Build Include="homework12\homework12Task5.sql" />
+    <Build Include="homework7\Homework7Task2_2.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="WorldWideImporters">
@@ -116,5 +123,6 @@
     <None Include="homework6\homework6Task3.sql" />
     <None Include="homework6\homework6Task4.sql" />
     <None Include="homework6\homework6Task5.sql" />
+    <None Include="homework12\StockItemsSource.xml" />
   </ItemGroup>
 </Project>
