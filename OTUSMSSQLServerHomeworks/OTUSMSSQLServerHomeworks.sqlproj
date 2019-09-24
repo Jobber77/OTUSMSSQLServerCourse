@@ -67,6 +67,7 @@
     <Folder Include="homework9" />
     <Folder Include="homework12" />
     <Folder Include="homework13" />
+    <Folder Include="homework 14" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="homework2\task1.sql" />
@@ -80,31 +81,6 @@
     <Build Include="homework3\Homework3Task3.sql" />
     <Build Include="homework3\Homework3Task4.sql" />
     <Build Include="homework3\Homework3Task5.sql" />
-    <Build Include="homework4\homework4Task1.sql" />
-    <Build Include="homework4\Homework4Task5.sql" />
-    <Build Include="homework7\Homework7Task1.sql" />
-    <Build Include="homework7\Homework7Task2.sql" />
-    <Build Include="homework7\Homework7Task3.sql" />
-    <Build Include="homework7\Homework7Task4.sql" />
-    <Build Include="homework7\Homework7Task5.sql" />
-    <Build Include="homework8\Homework8Task1.sql" />
-    <Build Include="homework8\Homework8Task2.sql" />
-    <Build Include="homework8\Homework8Task3.sql" />
-    <Build Include="homework8\Homework8Task4.sql" />
-    <Build Include="homework9\Homework9Task1.sql" />
-    <Build Include="homework9\Homework9Task2.sql" />
-    <Build Include="homework9\Homework9Task3.sql" />
-    <Build Include="homework12\homework12Task1.sql" />
-    <Build Include="homework12\homework12Task2.sql" />
-    <Build Include="homework12\homework12Task3.sql" />
-    <Build Include="homework12\homework12Task4.sql" />
-    <Build Include="homework12\homework12Task5.sql" />
-    <Build Include="homework7\Homework7Task2_2.sql" />
-    <Build Include="homework13\homework13Task1.sql" />
-    <Build Include="homework13\homework13Task2.sql" />
-    <Build Include="homework13\homework13Task3.sql" />
-    <Build Include="homework13\homework13Task4.sql" />
-    <Build Include="homework13\homework13Task5.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="WorldWideImporters">
@@ -130,5 +106,31 @@
     <None Include="homework6\homework6Task4.sql" />
     <None Include="homework6\homework6Task5.sql" />
     <None Include="homework12\StockItemsSource.xml" />
+    <None Include="homework4\Homework4Task5.sql" />
+    <None Include="homework4\homework4Task1.sql" />
+    <None Include="homework7\Homework7Task1.sql" />
+    <None Include="homework7\Homework7Task2.sql" />
+    <None Include="homework7\Homework7Task3.sql" />
+    <None Include="homework7\Homework7Task4.sql" />
+    <None Include="homework7\Homework7Task5.sql" />
+    <None Include="homework8\Homework8Task1.sql" />
+    <None Include="homework8\Homework8Task2.sql" />
+    <None Include="homework8\Homework8Task3.sql" />
+    <None Include="homework8\Homework8Task4.sql" />
+    <None Include="homework9\Homework9Task1.sql" />
+    <None Include="homework9\Homework9Task2.sql" />
+    <None Include="homework9\Homework9Task3.sql" />
+    <None Include="homework12\homework12Task1.sql" />
+    <None Include="homework12\homework12Task2.sql" />
+    <None Include="homework12\homework12Task3.sql" />
+    <None Include="homework12\homework12Task4.sql" />
+    <None Include="homework12\homework12Task5.sql" />
+    <None Include="homework7\Homework7Task2_2.sql" />
+    <None Include="homework13\homework13Task1.sql" />
+    <None Include="homework13\homework13Task2.sql" />
+    <None Include="homework13\homework13Task3.sql" />
+    <None Include="homework13\homework13Task4.sql" />
+    <None Include="homework13\homework13Task5.sql" />
+    <None Include="homework 14\homework14.sql" />
   </ItemGroup>
 </Project>
