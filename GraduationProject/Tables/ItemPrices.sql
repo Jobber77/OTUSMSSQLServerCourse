@@ -12,7 +12,7 @@
 );
 GO
 
-
+--This index will be ofthen used to find item on sale. If item on sale, Price and Currency will be always fetched as well.
 CREATE NONCLUSTERED INDEX [IX_ItemPrices_IsDiscounted_Price_Currency] ON [dbo].[ItemPrices] 
  (
   [IsDiscounted] ASC, 
@@ -22,6 +22,7 @@ CREATE NONCLUSTERED INDEX [IX_ItemPrices_IsDiscounted_Price_Currency] ON [dbo].[
 
 GO
 
+--Price will be often monitored to caculate average price. Most of the time, when you look for the price, you would get Currency as well.
 CREATE NONCLUSTERED INDEX [IX_ItemPrices_Price_Currency] ON [dbo].[ItemPrices] 
  (
   [Price] ASC, 
