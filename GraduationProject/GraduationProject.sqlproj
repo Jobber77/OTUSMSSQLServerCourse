@@ -57,6 +57,9 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Data" />
+    <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
@@ -68,8 +71,16 @@
     <Build Include="Tables\UserChannels.sql" />
     <Build Include="Tables\UserNotifications.sql" />
     <Build Include="Tables\UserWhishlist.sql" />
+    <Build Include="StoredProcedures\InsertUser.sql" />
+    <Build Include="StoredProcedures\InsertStore.sql" />
+    <Build Include="StoredProcedures\InsertChannel.sql" />
+    <Build Include="StoredProcedures\InsertItem.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GraduationProject.publish.xml" />
+    <None Include="Scripts\Data\Script.Users.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

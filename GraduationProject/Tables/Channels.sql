@@ -9,7 +9,7 @@
 GO
 
 -- This field will be often searched to find user's channels Ids.
-CREATE NONCLUSTERED INDEX [IX_Channels_ExternalId] ON [dbo].[Channels] 
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Channels_ExternalId] ON [dbo].[Channels] 
  (
   [ExternalId] ASC
  )
