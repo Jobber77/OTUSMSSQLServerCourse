@@ -14,7 +14,7 @@
 );
 GO
 
--- ExternalName and ExternalLink will be ofthen required together with ExternalId to send to user. 
+-- ExternalName and ExternalLink will be ofthen required together with ExternalId to send to user, but almost never will be required alone. ExternalId will be searched for each user interaction.
 CREATE NONCLUSTERED INDEX [IX_Items_ExternalId_ExternalName_ExternalLink] ON [dbo].[Items] 
  (
   [ExternalId] ASC, 
@@ -24,7 +24,7 @@ CREATE NONCLUSTERED INDEX [IX_Items_ExternalId_ExternalName_ExternalLink] ON [db
 
 GO
 
---There is common sence reccomendatation: when you have FK, there should be Index as well.
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_Items_LastAddedBy] ON [dbo].[Items] 
  (
   [LastAddedBy] ASC
@@ -32,7 +32,7 @@ CREATE NONCLUSTERED INDEX [IX_Items_LastAddedBy] ON [dbo].[Items]
 
 GO
 
---There is common sence reccomendatation: when you have FK, there should be Index as well.
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_Items_StoreId] ON [dbo].[Items] 
  (
   [StoreId] ASC

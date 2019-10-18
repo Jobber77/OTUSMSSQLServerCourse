@@ -11,7 +11,7 @@
 );
 GO
 
-
+-- Enabled channels will be searched for each UserNotification table insert.
 CREATE NONCLUSTERED INDEX [IX_UserChannels_Enabled] ON [dbo].[UserChannels] 
  (
   [Enabled] ASC

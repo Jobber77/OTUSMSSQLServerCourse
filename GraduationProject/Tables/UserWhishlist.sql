@@ -13,7 +13,7 @@
 );
 GO
 
-
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_UserWishlist_ItemId] ON [dbo].[UserWishlist] 
  (
   [ItemId] ASC
@@ -21,6 +21,8 @@ CREATE NONCLUSTERED INDEX [IX_UserWishlist_ItemId] ON [dbo].[UserWishlist]
 
 GO
 
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes. 
+--Enabled included in Index as it will be often user for updating UserNotifications table (only Enabled entries will be inserted).
 CREATE NONCLUSTERED INDEX [IX_UserWishlist_UserId_Enabled] ON [dbo].[UserWishlist] 
  (
   [UserId] ASC, 

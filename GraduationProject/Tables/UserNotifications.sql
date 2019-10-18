@@ -16,7 +16,7 @@
 );
 GO
 
-
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_UserNotifications_ChannelId] ON [dbo].[UserNotifications] 
  (
   [ChannelId] ASC
@@ -24,6 +24,7 @@ CREATE NONCLUSTERED INDEX [IX_UserNotifications_ChannelId] ON [dbo].[UserNotific
 
 GO
 
+-- IsSent will be predicate for sending messages selector. AddedAt will be selected for all not sent messages to verify message validity.
 CREATE NONCLUSTERED INDEX [IX_UserNotifications_IsSent_AddedAt] ON [dbo].[UserNotifications] 
  (
   [IsSent] ASC, 
@@ -32,6 +33,7 @@ CREATE NONCLUSTERED INDEX [IX_UserNotifications_IsSent_AddedAt] ON [dbo].[UserNo
 
 GO
 
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_UserNotifications_ItemId] ON [dbo].[UserNotifications] 
  (
   [ItemId] ASC
@@ -39,6 +41,7 @@ CREATE NONCLUSTERED INDEX [IX_UserNotifications_ItemId] ON [dbo].[UserNotificati
 
 GO
 
+--There is common sence reccomendatation: when you have FK, there should be Index as well, for join purposes.
 CREATE NONCLUSTERED INDEX [IX_UserNotifications_UserId] ON [dbo].[UserNotifications] 
  (
   [UserId] ASC
