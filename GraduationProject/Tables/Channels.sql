@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Channels]
 (
- [Id]         int NOT NULL ,
+ [Id]         int IDENTITY (1, 1) NOT NULL ,
  [ExternalId] nvarchar(50) NOT NULL ,
 
 

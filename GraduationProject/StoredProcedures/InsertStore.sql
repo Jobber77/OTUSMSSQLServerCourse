@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[InsertStore]
-	@name nvarchar(256),
-	@serverAddress nvarchar(256),
-	@searchEndPoint nvarchar(256)
+	@Name nvarchar(256),
+	@ServerAddress nvarchar(256),
+	@SearchEndPoint nvarchar(256)
 AS
 BEGIN
 	
@@ -13,9 +13,9 @@ BEGIN
 	)
 	VALUES
 	(
-		@name,
-		@serverAddress,
-		@searchEndPoint
+		@Name,
+		@ServerAddress,
+		@SearchEndPoint
 	)
 
 	SELECT SCOPE_IDENTITY()

@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[InsertUser]
-	@name nvarchar(256),
-	@email nvarchar(256),
-	@externalId nvarchar(256)
+	@Name nvarchar(256),
+	@Email nvarchar(256),
+	@ExternalId nvarchar(256)
 AS
 BEGIN
 
@@ -13,9 +13,9 @@ BEGIN
 	)
 	VALUES
 	(
-		@name,
-		@email,
-		@externalId
+		@Name,
+		@Email,
+		@ExternalId
 	)
 
 	SELECT SCOPE_IDENTITY()

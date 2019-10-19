@@ -10,4 +10,21 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
+:setvar UserId1 100500
+:setvar UserId2 500100
+:setvar UserId3 111222
+:setvar ChannelId1 123123
+:setvar ChannelId2 456456
+:setvar ChannelId3 789789
+:setvar ItemId1 741741
+:setvar ItemId2 852852
+:setvar ItemId3 963963
+:setvar StoreAddress1 'https://www.microsoft.com'
+:setvar StoreAddress2 'https://store.playstation.com'
+
 :r .\Data\Script.Users.sql
+:r .\Data\Script.Stores.sql
+:r .\Data\Script.Channels.sql
+:r .\Data\Script.Items.sql
+:r .\Data\Script.Settings.sql
+:r .\Data\Script.UserChannels.sql

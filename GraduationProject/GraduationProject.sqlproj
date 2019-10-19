@@ -75,10 +75,38 @@
     <Build Include="StoredProcedures\InsertStore.sql" />
     <Build Include="StoredProcedures\InsertChannel.sql" />
     <Build Include="StoredProcedures\InsertItem.sql" />
+    <Build Include="StoredProcedures\InsertItemPrice.sql" />
+    <Build Include="StoredProcedures\InsertSetting.sql" />
+    <Build Include="StoredProcedures\InsertUserChannel.sql" />
+    <Build Include="StoredProcedures\GenerateUserNotifications.sql" />
+    <Build Include="StoredProcedures\InsertUserWhishlist.sql" />
+    <Build Include="StoredProcedures\UpdateChannel.sql" />
+    <Build Include="StoredProcedures\UpdateItem.sql" />
+    <Build Include="StoredProcedures\UpdateSetting.sql" />
+    <Build Include="StoredProcedures\UpdateStore.sql" />
+    <Build Include="StoredProcedures\UpdateUserChannel.sql" />
+    <Build Include="StoredProcedures\UpdateUserNotification.sql" />
+    <Build Include="StoredProcedures\UpdateUser.sql" />
+    <Build Include="StoredProcedures\UpdateUserWhishlist.sql" />
+    <Build Include="StoredProcedures\DeleteUserWhishlist.sql" />
+    <Build Include="StoredProcedures\DeleteUserChannel.sql" />
+    <Build Include="StoredProcedures\SelectChannel.sql" />
+    <Build Include="StoredProcedures\SelectItem.sql" />
+    <Build Include="StoredProcedures\SelectSetting.sql" />
+    <Build Include="StoredProcedures\SelectStore.sql" />
+    <Build Include="StoredProcedures\SelectUserChannels.sql" />
+    <Build Include="StoredProcedures\SelectUserNotifications.sql" />
+    <Build Include="StoredProcedures\SelectUser.sql" />
+    <Build Include="StoredProcedures\SelectUserWhishlist.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GraduationProject.publish.xml" />
     <None Include="Scripts\Data\Script.Users.sql" />
+    <None Include="Scripts\Data\Script.Stores.sql" />
+    <None Include="Scripts\Data\Script.Channels.sql" />
+    <None Include="Scripts\Data\Script.UserChannels.sql" />
+    <None Include="Scripts\Data\Script.Settings.sql" />
+    <None Include="Scripts\Data\Script.Items.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

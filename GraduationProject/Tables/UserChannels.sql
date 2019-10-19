@@ -2,7 +2,7 @@
 (
  [UserId]    int NOT NULL ,
  [ChannelId] int NOT NULL ,
- [Enabled]   bit NOT NULL ,
+ [Enabled]   bit NOT NULL CONSTRAINT [DF_UserChannels_Enabled] DEFAULT 0 ,
 
 
  CONSTRAINT [PK_UserChannels] PRIMARY KEY CLUSTERED ([UserId] ASC, [ChannelId] ASC),

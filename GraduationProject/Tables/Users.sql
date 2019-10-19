@@ -11,7 +11,7 @@
 GO
 
 -- this index will speed up match users from Bot Messages to application users
-CREATE NONCLUSTERED INDEX [IX_Users_ExternalId] ON [dbo].[Users] 
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Users_ExternalId] ON [dbo].[Users] 
  (
   [ExternalId] ASC
  )

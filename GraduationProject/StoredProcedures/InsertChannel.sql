@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[InsertChannel]
-	@externalId nvarchar(256)
+	@ExternalId nvarchar(256)
 AS
 BEGIN
 	INSERT INTO [dbo].[Channels] 
@@ -8,8 +8,9 @@ BEGIN
 	)
 	VALUES
 	(
-		@externalId
+		@ExternalId
 	)
 
 	SELECT SCOPE_IDENTITY()
+
 END
