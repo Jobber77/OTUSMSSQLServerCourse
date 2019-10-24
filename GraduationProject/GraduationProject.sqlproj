@@ -100,13 +100,14 @@
     <Build Include="StoredProcedures\SelectUserWhishlist.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GraduationProject.publish.xml" />
+    <None Include="Development.publish.xml" />
     <None Include="Scripts\Data\Script.Users.sql" />
     <None Include="Scripts\Data\Script.Stores.sql" />
     <None Include="Scripts\Data\Script.Channels.sql" />
     <None Include="Scripts\Data\Script.UserChannels.sql" />
     <None Include="Scripts\Data\Script.Settings.sql" />
     <None Include="Scripts\Data\Script.Items.sql" />
+    <None Include="Scripts\Data\Script.UserWhishlist.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
