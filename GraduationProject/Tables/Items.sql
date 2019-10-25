@@ -5,7 +5,7 @@
  [ExternalId]   nvarchar(256) NOT NULL ,
  [ExternalName] nvarchar(256) NOT NULL ,
  [ExternalLink] nvarchar(256) NOT NULL ,
- [LastAddedBy]  int NOT NULL ,
+ [LastAddedBy]  bigint NOT NULL ,
 
 
  CONSTRAINT [PK_Items] PRIMARY KEY CLUSTERED ([Id] ASC),

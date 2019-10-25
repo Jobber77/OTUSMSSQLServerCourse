@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[UserNotifications]
 (
  [Id]        bigint IDENTITY (1, 1) NOT NULL ,
- [UserId]    int NOT NULL ,
+ [UserId]    bigint NOT NULL ,
  [ItemId]    bigint NOT NULL ,
  [ChannelId] int NOT NULL ,
  [AddedAt]   datetimeoffset(7) NOT NULL ,

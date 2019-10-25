@@ -108,6 +108,7 @@
     <None Include="Scripts\Data\Script.Settings.sql" />
     <None Include="Scripts\Data\Script.Items.sql" />
     <None Include="Scripts\Data\Script.UserWhishlist.sql" />
+    <None Include="Scripts\Data\Script.ItemPrices.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

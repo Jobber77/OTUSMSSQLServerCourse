@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[UserWishlist]
 (
  [Id]      bigint IDENTITY (1, 1) NOT NULL ,
- [UserId]  int NOT NULL ,
+ [UserId]  bigint NOT NULL ,
  [ItemId]  bigint NOT NULL ,
  [AddedAt] datetimeoffset(7) NOT NULL CONSTRAINT [DF_UserWishlist_Added] DEFAULT SYSDATETIMEOFFSET() ,
  [Enabled] bit NOT NULL CONSTRAINT [DF_UserWishlist_Enabled] DEFAULT 1 ,
