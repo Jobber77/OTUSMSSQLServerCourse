@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[UserChannels]
 (
- [UserId]    int NOT NULL ,
+ [UserId]    bigint NOT NULL ,
  [ChannelId] int NOT NULL ,
  [Enabled]   bit NOT NULL CONSTRAINT [DF_UserChannels_Enabled] DEFAULT 0 ,
 

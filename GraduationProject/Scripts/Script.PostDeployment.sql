@@ -29,3 +29,4 @@ Post-Deployment Script Template
 :r .\Data\Script.Settings.sql
 :r .\Data\Script.UserChannels.sql
 :r .\Data\Script.UserWhishlist.sql
+:r .\Data\Script.ItemPrices.sql
