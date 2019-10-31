@@ -15,3 +15,5 @@ BEGIN
 	SET @Date = DATEADD(DAY, 1, @Date);
 	EXECUTE [dbo].[InsertItemPrice] @ItemId, @Date, 50, 1, 1
 END
+
+GO
