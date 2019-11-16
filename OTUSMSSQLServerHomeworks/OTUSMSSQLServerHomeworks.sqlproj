@@ -68,6 +68,7 @@
     <Folder Include="homework12" />
     <Folder Include="homework13" />
     <Folder Include="homework 14" />
+    <Folder Include="homework25" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="homework2\task1.sql" />
@@ -132,5 +133,6 @@
     <None Include="homework13\homework13Task4.sql" />
     <None Include="homework13\homework13Task5.sql" />
     <None Include="homework 14\homework14.sql" />
+    <None Include="homework25\homework25.sql" />
   </ItemGroup>
 </Project>
