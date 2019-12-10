@@ -10,6 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
+-- Data seeding
 :setvar UserId1 100500
 :setvar UserId2 500100
 :setvar UserId3 111222
@@ -31,3 +32,6 @@ Post-Deployment Script Template
 :r .\Data\Script.UserWhishlist.sql
 :r .\Data\Script.UserNotifications.sql
 :r .\Data\Script.ItemPrices.sql
+
+-- Service broker types
+:r .\ServiceBroker\Script.ServiceBrokerTypes.sql
