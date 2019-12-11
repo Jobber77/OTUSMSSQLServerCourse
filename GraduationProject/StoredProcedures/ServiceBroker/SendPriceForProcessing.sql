@@ -16,21 +16,24 @@ BEGIN
 										itp.[ItemId] = @ItemId
 										AND itp.[RecordTime] = @RecordTime
 									FOR XML AUTO, root('ItemPrice')); 
+		
+		IF (@RequestMessage IS NOT NULL)
+		BEGIN
+			BEGIN DIALOG @InitDlgHandle
+			FROM SERVICE
+				[//GraduationProject/SB/InitiatorServices/NewPriceInitiatorService]
+			TO SERVICE
+				'//GraduationProject/SB/TargetServices/NewPriceTargetService'
+			ON CONTRACT
+				[//GraduationProject/SB/Contracts/PricesProcessingContract]
+			WITH ENCRYPTION=OFF; 
+
+			SEND ON CONVERSATION @InitDlgHandle
+			MESSAGE TYPE
+				[//GraduationProject/SB/RequestMessages/NewPriceMessage]
+			(@RequestMessage);
+		END
 	
-		BEGIN DIALOG @InitDlgHandle
-		FROM SERVICE
-			[//GraduationProject/SB/InitiatorServices/NewPriceInitiatorService]
-		TO SERVICE
-			'//GraduationProject/SB/TargetServices/NewPriceTargetService'
-		ON CONTRACT
-			[//GraduationProject/SB/Contracts/PricesProcessing]
-		WITH ENCRYPTION=OFF; 
-
-		SEND ON CONVERSATION @InitDlgHandle
-		MESSAGE TYPE
-			[//GraduationProject/SB/RequestMessages/NewPriceMessage]
-		(@RequestMessage);
-
 	COMMIT TRAN
 
 END

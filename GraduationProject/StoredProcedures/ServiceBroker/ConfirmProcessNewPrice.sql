@@ -14,7 +14,7 @@ BEGIN
 			@MessageType = [message_type_name]
 		FROM [dbo].[NewPriceInitiatorQueue]; 
 
-		IF @MessageType=N'//GraduationProject/SB/ReplyMessages/PriceProcessedMessage'
+		IF (@MessageType = N'http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog')
 		BEGIN
 			END CONVERSATION @InitiatorReplyDlgHandle;
 		END

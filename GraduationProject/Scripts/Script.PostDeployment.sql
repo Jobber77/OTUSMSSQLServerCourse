@@ -34,4 +34,4 @@ Post-Deployment Script Template
 :r .\Data\Script.ItemPrices.sql
 
 -- Service broker types
-:r .\ServiceBroker\Script.ServiceBrokerTypes.sql
+:r .\ServiceBroker\Script.ServiceBrokerQueueActivations.sql

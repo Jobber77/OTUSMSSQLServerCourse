@@ -19,15 +19,16 @@ BEGIN
 			@MessageType = [message_type_name]
 		FROM [dbo].[NewPriceTargetQueue]; 
 
-		IF @MessageType=N'//GraduationProject/SB/RequestMessages/NewPriceMessage'
+		IF (@MessageType = N'//GraduationProject/SB/RequestMessages/NewPriceMessage')
 		BEGIN
+			SET @Xml = CAST(@Message AS XML)
 			SELECT 
 				@ItemId = P.Price.value('@ItemId','INT'),
 				@DateTime = P.Price.value('@RecordTime', 'DATETIMEOFFSET(7)')
 			FROM 
 				@Xml.nodes('/ItemPrice/itp') AS P(Price)
 		
-			-- some notification generation logic will be here 
+			EXECUTE [dbo].[CheckGenerateUserNotifications] @ItemId, @DateTime
 
 			END CONVERSATION @TargetDlgHandle;
 		END 

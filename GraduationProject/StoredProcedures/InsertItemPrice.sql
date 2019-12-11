@@ -8,6 +8,8 @@ AS
 BEGIN
 	BEGIN TRAN
 
+		SET @RecordTime = COALESCE(@RecordTime, SYSDATETIMEOFFSET())
+
 		INSERT INTO [dbo].[ItemPrices] 
 		(
 			[ItemId],
@@ -19,7 +21,7 @@ BEGIN
 		VALUES
 		(
 			@ItemId,
-			COALESCE(@RecordTime, SYSDATETIMEOFFSET()),
+			@RecordTime,
 			@Price,
 			@Currency,
 			@IsDiscounted
