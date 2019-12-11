@@ -6,22 +6,28 @@
 		@IsDiscounted bit
 AS
 BEGIN
+	BEGIN TRAN
 
-	INSERT INTO [dbo].[ItemPrices] 
-	(
-		[ItemId],
-		[RecordTime],
-		[Price],
-		[Currency],
-		[IsDiscounted]
-	)
-	VALUES
-	(
-		@ItemId,
-		COALESCE(@RecordTime, SYSDATETIMEOFFSET()),
-		@Price,
-		@Currency,
-		@IsDiscounted
-	)
+		SET @RecordTime = COALESCE(@RecordTime, SYSDATETIMEOFFSET())
 
+		INSERT INTO [dbo].[ItemPrices] 
+		(
+			[ItemId],
+			[RecordTime],
+			[Price],
+			[Currency],
+			[IsDiscounted]
+		)
+		VALUES
+		(
+			@ItemId,
+			@RecordTime,
+			@Price,
+			@Currency,
+			@IsDiscounted
+		)
+
+	EXECUTE [SendPriceForProcessing] @ItemId, @RecordTime
+
+	COMMIT TRAN
 END

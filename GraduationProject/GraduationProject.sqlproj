@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <ServiceBrokerOption>EnableBroker</ServiceBrokerOption>
+    <Trustworthy>True</Trustworthy>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -60,6 +62,9 @@
     <Folder Include="Scripts" />
     <Folder Include="Scripts\Data" />
     <Folder Include="StoredProcedures" />
+    <Folder Include="Scripts\ServiceBroker" />
+    <Folder Include="StoredProcedures\ServiceBroker" />
+    <Folder Include="ServiceBrokerTypes" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
@@ -78,7 +83,7 @@
     <Build Include="StoredProcedures\InsertItemPrice.sql" />
     <Build Include="StoredProcedures\InsertSetting.sql" />
     <Build Include="StoredProcedures\InsertUserChannel.sql" />
-    <Build Include="StoredProcedures\GenerateUserNotifications.sql" />
+    <Build Include="StoredProcedures\CheckGenerateUserNotifications.sql" />
     <Build Include="StoredProcedures\InsertUserWhishlist.sql" />
     <Build Include="StoredProcedures\UpdateChannel.sql" />
     <Build Include="StoredProcedures\UpdateItem.sql" />
@@ -98,6 +103,17 @@
     <Build Include="StoredProcedures\SelectUserNotifications.sql" />
     <Build Include="StoredProcedures\SelectUser.sql" />
     <Build Include="StoredProcedures\SelectUserWhishlist.sql" />
+    <Build Include="StoredProcedures\ServiceBroker\SendPriceForProcessing.sql" />
+    <Build Include="StoredProcedures\ServiceBroker\ProcessNewPrice.sql" />
+    <Build Include="StoredProcedures\ServiceBroker\ConfirmProcessNewPrice.sql" />
+    <Build Include="ServiceBrokerTypes\NewPriceMessage.sql" />
+    <Build Include="ServiceBrokerTypes\PriceProcessedMessage.sql" />
+    <Build Include="ServiceBrokerTypes\PricesProcessingContract.sql" />
+    <Build Include="ServiceBrokerTypes\NewPriceTargetQueue.sql" />
+    <Build Include="ServiceBrokerTypes\NewPriceInitiatorQueue.sql" />
+    <Build Include="ServiceBrokerTypes\NewPriceTargetService.sql" />
+    <Build Include="ServiceBrokerTypes\NewPriceInitiatorService.sql" />
+    <Build Include="StoredProcedures\GenerateUserNotifications.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Development.publish.xml" />
@@ -110,6 +126,7 @@
     <None Include="Scripts\Data\Script.UserWhishlist.sql" />
     <None Include="Scripts\Data\Script.ItemPrices.sql" />
     <None Include="Scripts\Data\Script.UserNotifications.sql" />
+    <None Include="Scripts\ServiceBroker\Script.ServiceBrokerQueueActivations.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
