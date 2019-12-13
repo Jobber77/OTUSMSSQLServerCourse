@@ -44,7 +44,9 @@ BEGIN
 		FROM [dbo].[Settings] 
 		WHERE [Key] = 'NotificationSettings:MinDiscountPercent'
 
-		IF ( ((1 - (@CurrentPrice / @FullPrice)) * 100) > @MinDiscountPercent )
+		IF (@FullPrice IS NULL 
+			OR 
+			((1 - (@CurrentPrice / @FullPrice)) * 100) > @MinDiscountPercent )
 		BEGIN
 			EXECUTE [dbo].[GenerateUserNotifications] @ItemId, @DateTime
 		END

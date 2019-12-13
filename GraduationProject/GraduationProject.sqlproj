@@ -127,6 +127,7 @@
     <None Include="Scripts\Data\Script.ItemPrices.sql" />
     <None Include="Scripts\Data\Script.UserNotifications.sql" />
     <None Include="Scripts\ServiceBroker\Script.ServiceBrokerQueueActivations.sql" />
+    <None Include="Scripts\Script.DemoUsage.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
