@@ -69,6 +69,7 @@
     <Folder Include="homework13" />
     <Folder Include="homework 14" />
     <Folder Include="homework25" />
+    <Folder Include="Homework30" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="homework2\task1.sql" />
